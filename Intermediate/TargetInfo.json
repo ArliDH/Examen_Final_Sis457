@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Examen_Final_Sis457",
+			"Path": "C:\\Users\\SAMSUMG\\Documents\\Unreal Projects\\Examen_Final_Sis457\\Source\\Examen_Final_Sis457.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Examen_Final_Sis457Editor",
+			"Path": "C:\\Users\\SAMSUMG\\Documents\\Unreal Projects\\Examen_Final_Sis457\\Source\\Examen_Final_Sis457Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

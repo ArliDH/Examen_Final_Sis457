@@ -1,0 +1,7 @@
+C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Definitions.Examen_Final_Sis457.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Source\Examen_Final_Sis457/HabilidadesZombie.h
+C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Source\Examen_Final_Sis457\ZombiePotent.h
+C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Inc\Examen_Final_Sis457\ZombiePotent.generated.h
+C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Inc\Examen_Final_Sis457\HabilidadesZombie.generated.h

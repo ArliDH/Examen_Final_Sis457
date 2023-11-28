@@ -1,0 +1,23 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Examen_Final_Sis457-1299.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\Examen_Final_Sis457Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457GameMode.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457Pawn.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457Projectile.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Plant.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Zombie.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457.init.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457GameMode.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457Pawn.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457Projectile.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Plant.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Zombie.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Default.rc2.res"
+/OUT:"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\UE4Editor-Examen_Final_Sis457-1299.lib"
