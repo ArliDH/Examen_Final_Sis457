@@ -4,14 +4,18 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "ZombiePotent.h"
+#include "Enemy.h"
 #include "Examen_Final_Sis457GameMode.generated.h"
 
-class AZombie;
 UCLASS(MinimalAPI)
 class AExamen_Final_Sis457GameMode : public AGameModeBase
 {
 	GENERATED_BODY()
+
+private:
+	class AZombie* Zombie;
+	class AClockTower* ClockTower;
+	class ADecorarMovimiento* DecorarMovimiento;
 
 public:
 	AExamen_Final_Sis457GameMode();
@@ -24,9 +28,8 @@ public:
 	TArray<AZombie*> aZombie;
 	TArray<APlant*> aPlantas;
 
-	AZombie* NuevoZombie;
+	IEnemy* Decorar;
 
-	IZombiePotent* ZombiePotent;
 
 
 protected:
@@ -42,6 +45,8 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	void ZombieDestruido();
+
 
 };
 

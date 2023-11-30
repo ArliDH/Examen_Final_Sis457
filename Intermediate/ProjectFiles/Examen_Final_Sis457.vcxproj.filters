@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Examen_Final_Sis457.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A74F9112-820B-4E09-9591-302E32A79ECB}</UniqueIdentifier>
+      <UniqueIdentifier>{92EBDEFA-EC36-4D0B-AA62-2AF5C246A825}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Examen_Final_Sis457.Target.cs">
       <Filter>Source</Filter>
@@ -13,9 +13,8 @@
     </None>
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
-    <None Include="..\..\Examen_Final_Sis457.zip" />
     <Filter Include="Config">
-      <UniqueIdentifier>{1C339D2E-2FE2-45AC-9EA4-E90ECD8BE3B2}</UniqueIdentifier>
+      <UniqueIdentifier>{206D7F52-D7CE-4B15-A99A-B4FC62931973}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -33,12 +32,30 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Examen_Final_Sis457">
-      <UniqueIdentifier>{EF69E765-B6E5-463D-A155-975E5C54FC14}</UniqueIdentifier>
+      <UniqueIdentifier>{1F178360-097D-47F8-AC15-41A6670B821D}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Examen_Final_Sis457\ClockTower.cpp">
       <Filter>Source\Examen_Final_Sis457</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Examen_Final_Sis457\ClockTower.h">
+      <Filter>Source\Examen_Final_Sis457</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Examen_Final_Sis457\Decorador.cpp">
+      <Filter>Source\Examen_Final_Sis457</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Examen_Final_Sis457\Decorador.h">
+      <Filter>Source\Examen_Final_Sis457</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Examen_Final_Sis457\DecorarMovimiento.cpp">
+      <Filter>Source\Examen_Final_Sis457</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Examen_Final_Sis457\DecorarMovimiento.h">
+      <Filter>Source\Examen_Final_Sis457</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Examen_Final_Sis457\Enemy.cpp">
+      <Filter>Source\Examen_Final_Sis457</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Examen_Final_Sis457\Enemy.h">
       <Filter>Source\Examen_Final_Sis457</Filter>
     </ClInclude>
     <None Include="..\..\Source\Examen_Final_Sis457\Examen_Final_Sis457.Build.cs">
@@ -66,18 +83,6 @@
       <Filter>Source\Examen_Final_Sis457</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Examen_Final_Sis457\Examen_Final_Sis457Projectile.h">
-      <Filter>Source\Examen_Final_Sis457</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Examen_Final_Sis457\HabilidadEnormizar.cpp">
-      <Filter>Source\Examen_Final_Sis457</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Examen_Final_Sis457\HabilidadEnormizar.h">
-      <Filter>Source\Examen_Final_Sis457</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Examen_Final_Sis457\HabilidadesZombie.cpp">
-      <Filter>Source\Examen_Final_Sis457</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Examen_Final_Sis457\HabilidadesZombie.h">
       <Filter>Source\Examen_Final_Sis457</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Examen_Final_Sis457\Morph.cpp">
@@ -108,12 +113,6 @@
       <Filter>Source\Examen_Final_Sis457</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Examen_Final_Sis457\Zombie.h">
-      <Filter>Source\Examen_Final_Sis457</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Examen_Final_Sis457\ZombiePotent.cpp">
-      <Filter>Source\Examen_Final_Sis457</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Examen_Final_Sis457\ZombiePotent.h">
       <Filter>Source\Examen_Final_Sis457</Filter>
     </ClInclude>
   </ItemGroup>

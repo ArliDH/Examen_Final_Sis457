@@ -4,18 +4,18 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "ZombiePotent.h"
 #include "Subscriptor.h"
 #include "Morph.h"
+#include "Enemy.h"
 #include "Zombie.generated.h"
 
 class AClockTower;
 UCLASS()
-class EXAMEN_FINAL_SIS457_API AZombie : public AActor, public IZombiePotent, public ISubscriptor, public IMorph
+class EXAMEN_FINAL_SIS457_API AZombie : public AActor, public ISubscriptor, public IMorph, public IEnemy
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AZombie();
 
@@ -29,9 +29,15 @@ public:
 
 	float DistanciaInicial;
 	FVector UbicacionInicial;
-	FVector LocalizacionObjetivo;
-	FVector Direccion;
-	float DistanciaAlObjetivo;
+	FVector LocalizacionObjetivo = FVector(-800.0f, -400.0f, 160.0f); // Cambia la ubicación objetivo según tus necesidades
+	// Calcula la dirección y distancia al objetivo
+	FVector Direccion = LocalizacionObjetivo - FVector(-800.0f, 400.0f, 160.0f);
+	// Calcula la distancia de al objetivo
+	float DistanciaAlObjetivo = FVector::Dist(LocalizacionObjetivo, this->GetActorLocation());
+
+	UPROPERTY(EditAnywhere)
+	float MovementSpeed;
+
 
 private:
 	//The Clock Tower of this Subscriber
@@ -40,31 +46,35 @@ private:
 
 	bool bIsTimerActive;
 	float ElapsedTime;
+
+
+private:
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	float MoveSpeed = 0.2f; // Velocidad de movimiento del zombie
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	float DamageGenerates = 10.0f;
 	float Health = 500.0f;
 	float SpawnAfter = 0.0f;
-	float MovementSpeed = 6.1f;
 	bool bCanMove = false;
 
+
 	float TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser);
-	void MoveToTarget(FVector TargetLocation);
 
 	FORCEINLINE void SetSpawnAfter(float _SpawnAfter) { SpawnAfter = _SpawnAfter; }
 	FORCEINLINE float GetSpawnAfter() { return SpawnAfter; }
 	FORCEINLINE void SetCanMove(bool _bCanMove) { bCanMove = _bCanMove; }
 
-
-	virtual void Fight() override {}
-	virtual int GetDamage() override { return 5; }
-	virtual void Die() override {}
+	virtual void AumentoMovimiento() override {}
+	virtual float GetVelocidad() override { return MovementSpeed += 0.2f; }
+	virtual void EstablecerVelocidad(float NuevaVelocidad) override {}
 
 	virtual void Destroyed() override;
 	//Called when the Plublisher changed its state, it will execute thisSubscriber routine

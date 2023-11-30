@@ -1,0 +1,3 @@
+C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Definitions.Examen_Final_Sis457.h
+C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Source\Examen_Final_Sis457\Enemy.h
+C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Inc\Examen_Final_Sis457\Enemy.generated.h

@@ -4,7 +4,7 @@
 #include "Examen_Final_Sis457Pawn.h"
 #include "Plant.h"
 #include "Zombie.h"
-#include "HabilidadEnormizar.h"
+#include "DecorarMovimiento.h"
 #include "ClockTower.h"
 
 AExamen_Final_Sis457GameMode::AExamen_Final_Sis457GameMode()
@@ -19,10 +19,10 @@ void AExamen_Final_Sis457GameMode::BeginPlay()
 	Super::BeginPlay();
 
 	//Decorador
-	AHabilidadEnormizar* HabilidadEnormizar = GetWorld()->SpawnActor<AHabilidadEnormizar>(AHabilidadEnormizar::StaticClass());
+	DecorarMovimiento = GetWorld()->SpawnActor<ADecorarMovimiento>(ADecorarMovimiento::StaticClass());
 
 	//Observador
-	AClockTower* ClockTower = GetWorld()->SpawnActor<AClockTower>(AClockTower::StaticClass());
+    ClockTower = GetWorld()->SpawnActor<AClockTower>(AClockTower::StaticClass());
 
 	FTransform SpawnLocation;
 	SpawnLocation.SetLocation(FVector(-800.0f, -400.0f, 200.0f));
@@ -50,39 +50,50 @@ void AExamen_Final_Sis457GameMode::BeginPlay()
 
 	for (int i = 0; i < 3; ++i)
 	{
-		AZombie* NewZombie = SpawnZombie(FVector(initialPositionX + i * 150.0f, initialPositionY, 200.0f));
+		Zombie = SpawnZombie(FVector(initialPositionX + i * 150.0f, initialPositionY, 200.0f));
 
-		if (NewZombie)
-		{
-			NewZombie->SetSpawnAfter(FMath::RandRange(1, 5));
-			NewZombie->SetActorHiddenInGame(false);
-			NewZombie->SetActorEnableCollision(true);     // Habilita las colisiones si es necesario
-			NewZombie->SetCanMove(true);
-			NewZombie->SetClockTower(ClockTower);
-			ClockTower->SetTimeOfDay("no lo eliminaste");
-			aZombie.Add(NewZombie);
-
-		}
+		//if (NewZombie)
+		//{
+		//	NewZombie->SetSpawnAfter(FMath::RandRange(1, 5));
+		//	NewZombie->SetActorHiddenInGame(false);
+		//	NewZombie->SetActorEnableCollision(true);     // Habilita las colisiones si es necesario
+		//	NewZombie->SetCanMove(true);
+		//	NewZombie->SetClockTower(ClockTower);
+		//	DecorarMovimiento->SetDecorar(NewZombie);
+		//	aZombie.Add(NewZombie);
+		//	
+		//}
 	}
 	////Decorador
 	//AHabilidadEnormizar* HabilidadEnormizar = GetWorld()->SpawnActor<AHabilidadEnormizar>(AHabilidadEnormizar::StaticClass());
 
 	////Observador
 	//AClockTower* ClockTower = GetWorld()->SpawnActor<AClockTower>(AClockTower::StaticClass());
-
+	Zombie = GetWorld()->SpawnActor<AZombie>(AZombie::StaticClass(), FVector(-1000.0f, -400.0f, 200.0f), FRotator::ZeroRotator);
+	Zombie->SetClockTower(ClockTower);
+	DecorarMovimiento->SetDecorar(Zombie);
 	//ClockTower->SetTimeOfDay("no lo eliminaste");
-
-	if (ClockTower) {
-		ZombiePotent = HabilidadEnormizar;
-		ZombiePotent->Fight();
-	}
-
+	GetWorldTimerManager().SetTimer(Temporizador, this, &AExamen_Final_Sis457GameMode::ZombieDestruido, 10.0f, false);
+	
+	Decorar = DecorarMovimiento;
+	Decorar->GetVelocidad();
+	Zombie->MovementSpeed += Decorar->GetVelocidad();
 }
 
 void AExamen_Final_Sis457GameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	
 
+}
+
+void AExamen_Final_Sis457GameMode::ZombieDestruido()
+{
+	if (Zombie) {
+		ClockTower->SetTimeOfDay("no lo eliminaste");
+	}
+	//ClockTower->SetTimeOfDay("no lo eliminaste");
+	
 }
 
 

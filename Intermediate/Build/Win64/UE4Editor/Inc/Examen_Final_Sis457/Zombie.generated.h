@@ -75,7 +75,8 @@ public: \
 
 
 #define Examen_Final_Sis457_Source_Examen_Final_Sis457_Zombie_h_16_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__ClockTower() { return STRUCT_OFFSET(AZombie, ClockTower); }
+	FORCEINLINE static uint32 __PPO__ClockTower() { return STRUCT_OFFSET(AZombie, ClockTower); } \
+	FORCEINLINE static uint32 __PPO__MoveSpeed() { return STRUCT_OFFSET(AZombie, MoveSpeed); }
 
 
 #define Examen_Final_Sis457_Source_Examen_Final_Sis457_Zombie_h_13_PROLOG

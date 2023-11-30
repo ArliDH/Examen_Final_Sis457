@@ -23,9 +23,9 @@ void EmptyLinkFunctionForGeneratedCodeZombie() {}
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	EXAMEN_FINAL_SIS457_API UClass* Z_Construct_UClass_AClockTower_NoRegister();
-	EXAMEN_FINAL_SIS457_API UClass* Z_Construct_UClass_UZombiePotent_NoRegister();
 	EXAMEN_FINAL_SIS457_API UClass* Z_Construct_UClass_USubscriptor_NoRegister();
 	EXAMEN_FINAL_SIS457_API UClass* Z_Construct_UClass_UMorph_NoRegister();
+	EXAMEN_FINAL_SIS457_API UClass* Z_Construct_UClass_UEnemy_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(AZombie::execOnHit)
 	{
@@ -230,9 +230,17 @@ void EmptyLinkFunctionForGeneratedCodeZombie() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshZombie;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MovementSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MovementSpeed;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ClockTower_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ClockTower;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
@@ -261,6 +269,13 @@ void EmptyLinkFunctionForGeneratedCodeZombie() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AZombie_Statics::NewProp_MeshZombie = { "MeshZombie", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZombie, MeshZombie), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AZombie_Statics::NewProp_MeshZombie_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZombie_Statics::NewProp_MeshZombie_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZombie_Statics::NewProp_MovementSpeed_MetaData[] = {
+		{ "Category", "Zombie" },
+		{ "ModuleRelativePath", "Zombie.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AZombie_Statics::NewProp_MovementSpeed = { "MovementSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZombie, MovementSpeed), METADATA_PARAMS(Z_Construct_UClass_AZombie_Statics::NewProp_MovementSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZombie_Statics::NewProp_MovementSpeed_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZombie_Statics::NewProp_ClockTower_MetaData[] = {
 		{ "Comment", "//The Clock Tower of this Subscriber\n" },
 		{ "ModuleRelativePath", "Zombie.h" },
@@ -268,14 +283,23 @@ void EmptyLinkFunctionForGeneratedCodeZombie() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AZombie_Statics::NewProp_ClockTower = { "ClockTower", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZombie, ClockTower), Z_Construct_UClass_AClockTower_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AZombie_Statics::NewProp_ClockTower_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZombie_Statics::NewProp_ClockTower_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZombie_Statics::NewProp_MoveSpeed_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Zombie.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AZombie_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZombie, MoveSpeed), METADATA_PARAMS(Z_Construct_UClass_AZombie_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZombie_Statics::NewProp_MoveSpeed_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AZombie_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZombie_Statics::NewProp_MeshZombie,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZombie_Statics::NewProp_MovementSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZombie_Statics::NewProp_ClockTower,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZombie_Statics::NewProp_MoveSpeed,
 	};
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AZombie_Statics::InterfaceParams[] = {
-			{ Z_Construct_UClass_UZombiePotent_NoRegister, (int32)VTABLE_OFFSET(AZombie, IZombiePotent), false },
 			{ Z_Construct_UClass_USubscriptor_NoRegister, (int32)VTABLE_OFFSET(AZombie, ISubscriptor), false },
 			{ Z_Construct_UClass_UMorph_NoRegister, (int32)VTABLE_OFFSET(AZombie, IMorph), false },
+			{ Z_Construct_UClass_UEnemy_NoRegister, (int32)VTABLE_OFFSET(AZombie, IEnemy), false },
 		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AZombie_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AZombie>::IsAbstract,
@@ -304,7 +328,7 @@ void EmptyLinkFunctionForGeneratedCodeZombie() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AZombie, 649200843);
+	IMPLEMENT_CLASS(AZombie, 2801250191);
 	template<> EXAMEN_FINAL_SIS457_API UClass* StaticClass<AZombie>()
 	{
 		return AZombie::StaticClass();

@@ -1,0 +1,37 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Examen_Final_Sis457-0172.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\Examen_Final_Sis457Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\ClockTower.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Decorador.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\DecorarMovimiento.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Enemy.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457GameMode.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457Pawn.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457Projectile.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Morph.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Plant.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Publisher.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Subscriptor.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Zombie.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\ClockTower.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Decorador.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\DecorarMovimiento.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Enemy.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457.init.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457GameMode.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457Pawn.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Examen_Final_Sis457Projectile.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Morph.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Plant.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Publisher.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Subscriptor.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Zombie.gen.cpp.obj"
+"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\Default.rc2.res"
+/OUT:"C:\Users\SAMSUMG\Documents\Unreal Projects\Examen_Final_Sis457\Intermediate\Build\Win64\UE4Editor\Development\Examen_Final_Sis457\UE4Editor-Examen_Final_Sis457-0172.lib"

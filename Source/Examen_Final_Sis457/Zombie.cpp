@@ -36,7 +36,7 @@ AZombie::AZombie()
 	Tags.Add(TEXT("Enemy"));
 	DamageGenerates = 10.0f;
 	Health = 50.0f;
-	MovementSpeed = 0.1f;
+	MovementSpeed = 0.2f;
 	bCanMove = false;
 	bIsTimerActive = true;
 	ElapsedTime= 0.0f;
@@ -98,7 +98,6 @@ void AZombie::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitive
 	}
 }
 
-
 // Called when the game starts or when spawned
 void AZombie::BeginPlay()
 {
@@ -112,15 +111,28 @@ void AZombie::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	//if (bCanMove && !this->IsHidden())
-	//{
-	//	MoveToTarget(FVector(-800.0f, -400.0f, 160.0f));
-	//	//moverse();
-	//}
 	if (bIsTimerActive)
 	{
 		ElapsedTime += DeltaTime;
 	}
+
+	float DeltaMove = MovementSpeed * GetWorld()->DeltaTimeSeconds;
+
+	if (DeltaMove > DistanciaAlObjetivo)
+	{
+		// Si el desplazamiento excede la distancia al objetivo, mueve directamente al objetivo
+		this->SetActorLocation(LocalizacionObjetivo);
+	}
+	else
+	{
+		// Mueve el objeto en la dirección calculada
+		this->AddActorWorldOffset(Direccion * DeltaMove);
+
+	}
+
+
+	//GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Yellow, FString::Printf(TEXT("Este es un mensaje")));
+
 }
 
 float AZombie::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
@@ -129,27 +141,6 @@ float AZombie::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AContro
 	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Health Zombie: %f"), this->Health));
 	// Devuelve la cantidad de daño que se aplicó realmente.
 	return Health;
-}
-
-void AZombie::MoveToTarget(FVector TargetLocation)
-{
-	//FVector Direction = TargetLocation - FVector(-800.0f, 400.0f, 160.0f);
-	//float DistanceToTarget = FVector::Dist(TargetLocation, FVector(-800.0f, -400.0f, 160.0f));
-
-	//// Calcula el desplazamiento en este frame
-	//float DeltaMove = MovementSpeed * GetWorld()->DeltaTimeSeconds;
-
-	//if (DeltaMove > DistanceToTarget)
-	//{
-	//	// Si el desplazamiento excede la distancia al objetivo, mueve directamente al objetivo
-	//	this->SetActorLocation(TargetLocation);
-
-	//}
-	//else
-	//{
-	//	// Mueve el objeto en la direcci?n calculada
-	//	this->AddActorWorldOffset(Direction * DeltaMove);
-	//}
 }
 
 void AZombie::Destroyed()
@@ -168,19 +159,17 @@ void AZombie::Morph()
 {
 	FString Time = ClockTower->GetTime();
 
-	if (ElapsedTime > 10.0f) {
-		if (Time.Compare("no lo eliminaste"))
-		{
-			//Execute the Morning routine
-			GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Yellow, FString::Printf(TEXT("Ya pasaron 10 minutos en el que el zombie no muere")));
+	if (!Time.Compare("no lo eliminaste"))
+	{
+		//Execute the Morning routine
+		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Yellow, FString::Printf(TEXT("Ya pasaron 10 minutos en el que el zombie no muere"), *Time));
 
-		}
 	}
-	//else if (!Time.Compare("Midday"))
-	//{
-	//	//Execute the Midday routine
-	//	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Yellow,FString::Printf(TEXT("It is %s, so FreakyAllen's right eye starts to twitch"),*Time));
-	//}
+	else if (!Time.Compare("eliminaste"))
+	{
+		//Execute the Midday routine
+		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Yellow,FString::Printf(TEXT("It is %s, so FreakyAllen's right eye starts to twitch"),*Time));
+	}
 	//else if (!Time.Compare("Evening"))
 	//{
 	//	//Execute the Evening routine
